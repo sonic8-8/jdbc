@@ -18,7 +18,7 @@ class MemberRepositoryV0Test {
 
     MemberRepositoryV0 repository = new MemberRepositoryV0();
 
-    @DisplayName("DriverManager를 사용해서 CRUD 작업을 수행할 수 있다")
+    @DisplayName("DriverManager로 커넥션 연결을 구현한 Repository로 CRUD 작업을 수행할 수 있다")
     @Test
     void crud() throws SQLException {
         // save
