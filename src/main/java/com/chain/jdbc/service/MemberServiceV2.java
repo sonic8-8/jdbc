@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * 트랜잭션 - 파리미터로 커넥션 받기, 커넥션 풀을 고려한 종료
+ * 트랜잭션 - 파라미터로 커넥션 받기, 커넥션 풀을 고려한 종료
  */
 @Slf4j
 @RequiredArgsConstructor
