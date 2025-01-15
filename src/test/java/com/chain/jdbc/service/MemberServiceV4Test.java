@@ -3,6 +3,7 @@ package com.chain.jdbc.service;
 import com.chain.jdbc.domain.Member;
 import com.chain.jdbc.repository.MemberRepository;
 import com.chain.jdbc.repository.MemberRepositoryV4_1;
+import com.chain.jdbc.repository.MemberRepositoryV4_2;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -23,10 +24,13 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * MemberRepositoryV4_1
  * 예외 누수 문제 해결
  * SQLException 제거
- *
  * MemberRepository 인터페이스 의존
+ * ---
+ * MemberRepositoryV4_2
+ * SQLExceptionTranslator 추가
  */
 @Slf4j
 @SpringBootTest
@@ -60,7 +64,8 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-            return new MemberRepositoryV4_1(dataSource);
+//            return new MemberRepositoryV4_1(dataSource);
+            return new MemberRepositoryV4_2(dataSource);
         }
 
         @Bean
