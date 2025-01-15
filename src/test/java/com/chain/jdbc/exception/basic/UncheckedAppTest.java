@@ -63,7 +63,7 @@ public class UncheckedAppTest {
             try {
                 runSQL();
             } catch (SQLException e) {
-                throw new RuntimeSQLException(e);
+                throw new RuntimeSQLException(e); // 예외를 전환할 때, 꼭!! 기존 예외를 포함해줘야 스택 트레이스를 확인할 수 있다
             }
         }
 
