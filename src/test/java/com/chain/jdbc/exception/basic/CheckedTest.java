@@ -1,7 +1,6 @@
-package com.chain.jdbc.exception;
+package com.chain.jdbc.exception.basic;
 
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

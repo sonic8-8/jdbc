@@ -1,4 +1,4 @@
-package com.chain.jdbc.exception;
+package com.chain.jdbc.exception.basic;
 
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
