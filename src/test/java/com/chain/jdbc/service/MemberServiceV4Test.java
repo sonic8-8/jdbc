@@ -4,6 +4,7 @@ import com.chain.jdbc.domain.Member;
 import com.chain.jdbc.repository.MemberRepository;
 import com.chain.jdbc.repository.MemberRepositoryV4_1;
 import com.chain.jdbc.repository.MemberRepositoryV4_2;
+import com.chain.jdbc.repository.MemberRepositoryV5;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -31,6 +32,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * ---
  * MemberRepositoryV4_2
  * SQLExceptionTranslator 추가
+ * ---
+ * MemberRepositoryV5
+ * Jdbc 템플릿
  */
 @Slf4j
 @SpringBootTest
@@ -65,7 +69,8 @@ class MemberServiceV4Test {
         @Bean
         MemberRepository memberRepository() {
 //            return new MemberRepositoryV4_1(dataSource);
-            return new MemberRepositoryV4_2(dataSource);
+//            return new MemberRepositoryV4_2(dataSource);
+            return new MemberRepositoryV5(dataSource);
         }
 
         @Bean
